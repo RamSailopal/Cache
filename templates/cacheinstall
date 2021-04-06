@@ -25,4 +25,4 @@ then
 else
         sel="7"
 fi
-sleep 1;echo "4"|./cinstall_silent
+sleep 1;echo "$sel"|./cinstall_silent
