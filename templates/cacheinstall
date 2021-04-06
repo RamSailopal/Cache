@@ -1,0 +1,28 @@
+#!/bin/bash
+if [[ "$1" != "lnxrhx86" && "$1" != "lnxrhx64" && "$1" != "lnxsusex64" && "$1" != "lnxsusex86" ]]
+then
+	echo "Wrong platform parameter specified"
+	exit 1
+fi
+cd "/mnt/cache"
+export ISC_PACKAGE_PLATFORM="{{ platform }}"
+export ISC_PACKAGE_INSTANCENAME="{{ instname }}"
+export ISC_PACKAGE_INSTALLDIR="{{ inst_dir }}"
+export ISC_PACKAGE_INITIAL_MGRGROUP="{{ mangrp }}"
+export ISC_PACKAGE_CSP_CONFIGURE="{{ cspbool }}"
+export ISC_PACKAGE_CSP_SERVERTYPE="{{ servtyp }}"
+export ISC_PACKAGE_CSP_GATEWAY_DIR="{{ csp_dir }}"
+export ISC_PACKAGE_STARTCACHE="N"
+if [[ "$1" == "lnxrhx64" ]]
+then
+	sel="3"
+elif [[ "$1" == "lnxrhx86" ]]
+then
+        sel="4"
+elif [[ "$1" == "lnxsusex64" ]]
+then
+        sel="6"
+else
+        sel="7"
+fi
+sleep 1;echo "4"|./cinstall_silent

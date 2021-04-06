@@ -1,0 +1,15 @@
+[Unit]
+Description=Intersystems Cache daemon
+After=network.target
+
+[Service]
+Type=forking
+ExecStart=bash -c "{{ inst_dir }}/cache start"
+ExecStop=bash -c "{{ inst_dir }}/cache stop"
+ExecReload=bash -c "{{ inst_dir }}/cache restart"
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+Alias=cache.service
+

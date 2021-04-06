@@ -1,0 +1,10 @@
+---
+# defaults file for cache
+platform: lnxsusex86
+instname: TEST
+inst_dir: /usr/local/cache
+mangrp: cacheusr
+cspbool: Y
+servtyp: Apache
+csp_dir: /opt/cspgateway
+key_bool: N

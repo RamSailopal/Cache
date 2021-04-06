@@ -1,0 +1,6 @@
+---
+# handlers file for cache
+- name: restart cache
+  service:
+     name: cache
+     state: restarted
