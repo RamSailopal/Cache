@@ -30,6 +30,11 @@
   loop:
     - { name: 'kernel.shmall', value: '2097152' }
     - { name: 'kernel.shmmax', value: '333554432' }
+- name: "Add the maangement group user"
+  user:
+   name: "{{ mangrp }}"
+   state: "present"
+
 - name: "Run the Cache install script"
   command: "/tmp/cacheinstall {{ platform }}"
 - name: Copy the Cache key file
