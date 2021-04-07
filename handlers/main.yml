@@ -1,6 +1,9 @@
 ---
 # handlers file for cache
+- name: Reload the systemd service daemon
+  command: "systemctl daemon-reload"
 - name: restart cache
   service:
      name: cache
      state: restarted
+     enabled: "yes"
