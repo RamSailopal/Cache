@@ -8,6 +8,8 @@ Requirements
 
 It is assumed that Cache is to be installed on either a Red Hat or SuSE derived system as adviced by Intersystems
 
+An iso of Cache 2012 Server is required, named Cache2012.iso and placed in the files folder ready to be sent to the remote machine as part of the installation process
+
 Role Variables
 --------------
 
@@ -47,6 +49,7 @@ csp_dir - Where to install Cache Server Pages (CSP)
 key_bool - Whether you have a Cache key/licence file to copy (Y or N) If Y then you must pass the variable key_lock which should contain the location of the key file on the local server
 
 [ Default - N ]
+
 Dependencies
 ------------
 
