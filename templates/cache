@@ -143,18 +143,8 @@ case "$1" in
         sleep 2;
 	cachecmd|./cstart;
 	;;
-    status)
-	echo "Checking for service Cache"
-	res=$(ps -ef | grep cache | grep rbl);
-	if [ "$res" != "" ]
-	then
-		echo "Cache is running";
-	else
-		echo "Cache is not running";
-	fi
-	;;
     *)
-	echo "Usage: $0 {start|stop|status|restart}"
+	echo "Usage: $0 {start|stop|restart}"
 	exit 1
 	;;
 esac
