@@ -46,7 +46,7 @@ csp_dir - Where to install Cache Server Pages (CSP)
 
 [ Default - /opt/cspgateway ]
 
-key_bool - Whether you have a Cache key/licence file to copy (Y or N) If Y then you must pass the variable key_lock which should contain the location of the key file on the local server
+key_bool - Whether you have a Cache key/licence file to copy (Y or N) If Y then you must pass the variable key_loc which should contain the location of the key file on the local server
 
 [ Default - N ]
 
