@@ -36,7 +36,7 @@
     - { name: 'kernel.shmmax', value: '333554432' }
 
 - name: "Add the maangement group user"
-  user:
+  group:
    name: "{{ mangrp }}"
    state: "present"
 
