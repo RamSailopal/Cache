@@ -4,9 +4,9 @@ After=network.target
 
 [Service]
 Type=forking
-ExecStart=bash -c "{{ inst_dir }}/cache start"
-ExecStop=bash -c "{{ inst_dir }}/cache stop"
-ExecReload=bash -c "{{ inst_dir }}/cache restart"
+ExecStart=/bin/bash -c "{{ inst_dir }}/cache start"
+ExecStop=/bin/bash -c "{{ inst_dir }}/cache stop"
+ExecReload=/bin/bash -c "{{ inst_dir }}/cache restart"
 RemainAfterExit=yes
 
 [Install]
