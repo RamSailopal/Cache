@@ -10,7 +10,6 @@
   loop:
      - { src: "templates/cacheinstall", dest: "/tmp/cacheinstall", mode: "0744" }
      - { src: "templates/cache.service", dest: "/usr/lib/systemd/system/cache.service", mode: "0444" }
-
 - name: Copy Cache iso
   copy:
      src: files/Cache2012.iso
@@ -18,15 +17,12 @@
      owner: root
      group: root
      mode: 0444
-
 - name: Creates cache install directory
   file:
     path: /mnt/cache
     state: directory
-
 - name: Mount the iso
   command: "mount /var/opt/Cache2012.iso /mnt/cache"
-
 - name: "Change shared memory settings"
   sysctl:
     name: "{{ item.name }}"
@@ -34,22 +30,18 @@
   loop:
     - { name: 'kernel.shmall', value: '2097152' }
     - { name: 'kernel.shmmax', value: '333554432' }
-
 - name: "Add the maangement group user"
   group:
    name: "{{ mangrp }}"
    state: "present"
-
 - name: "Run the Cache install script"
   command: "/tmp/cacheinstall {{ platform }}"
-
 - name: Copy the Cache key file
   copy:
      src: "{{ key_loc }}"
      dest: "{{ inst_dir }}/mgr/cache.key"
   when: 
    - key_bool=="Y" 
-
 - name: copy Cache service file
   template:
      src: "{{ item.src }}"
@@ -59,7 +51,6 @@
      mode: "{{ item.mode }}"
   loop:
      - { src: "templates/cache", dest: "/usr/local/cache/cache", mode: "0744" }
-
 - name: Copy the cache service exe
   copy:
      src: "{{ item.src }}"
@@ -71,5 +62,3 @@
   notify:
     - Reload the systemd service daemon
     - restart cache
- 
-
