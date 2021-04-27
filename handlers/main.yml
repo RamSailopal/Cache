@@ -2,6 +2,8 @@
 # handlers file for cache
 - name: Reload the systemd service daemon
   command: "systemctl daemon-reload"
+  tags:
+  - skip_ansible_lint # Have to use systemctl as opposed to systemd module as systemd module wasn't not reloading correctly
 - name: restart cache
   service:
      name: cache

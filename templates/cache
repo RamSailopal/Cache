@@ -127,7 +127,7 @@ case "$1" in
 	echo -n "Starting Cache"
 	cd {{ inst_dir }};
 	cachecmd|./cstart;
-	cd {{ csp_dir }};
+	cd {{ csp_dir }}/bin;
 	./CSPnsd;
 	;;
     stop)
