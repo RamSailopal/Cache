@@ -10,7 +10,7 @@ csp_dir: /opt/cspgateway
 key_bool: N
 currjourn: 
 altjourn:
-databases: ['ENG=/var/rbl7/rblsys/eng/','LR=/var/rbl7/rblsys/lr/','MAW=/var/rbl7/rblsys/maw/','MCN=/var/rbl7/rblsys/mcn/','NES=/var/rbl7/rblsys/nes/','PEN=/var/rbl7/rblsys/pen/','RAS=/var/rbl7/rblsys/','RBL=/var/rbl7/rblsys/rbl/','RYD=/var/rbl7/rblsys/ryd/','SCRCH=/var/rbl7/rblsys/scrch/','SHR=/var/rbl7/rblsys/shr/']
-namespaces: ['ENG=ENG','LR=LR','MAW=MAW','MCN=MCN','NES=NES','PEN=PEN','RAS=RAS','RBL=RBL','RYD=RYD','SCRCH=SCRCH','SHR=SHR']
-Directories: ['/var/rbl7/rblsys/eng/','/var/rbl7/rblsys/lr/','/var/rbl7/rblsys/maw/','/var/rbl7/rblsys/mcn/','/var/rbl7/rblsys/nes/','/var/rbl7/rblsys/pen/','/var/rbl7/rblsys/','/var/rbl7/rblsys/rbl/','var/rbl7/rblsys/ryd/','/var/rbl7/rblsys/scrch/','/var/rbl7/rblsys/shr/']
-devices: ['10 - Production Photocopier=lpr -Prprt10^OTH^P-DEC^^"QW"^^Production Photocopier^10','133 - Production Office=lpr -Prprt52^OTH^P-DEC^^"QW"^^Zebra 2^133','134 - Production Office=lpr -Prprt53^OTH^P-DEC^^"QW"^^Epson LQ1120^134','134 - Production Office=lpr -Prprt53^OTH^P-DEC^^"QW"^^Epson LQ1120^134','136 - Production Office=lpr -Prprt54^OTH^P-DEC^^"QW"^^Laserjet 4+^136']
+databases: ['TEST=/var/cache/test/', 'TEST1=/var/cache/test1']
+namespaces: ['TEST=TEST', 'TEST1=TEST1']
+Directories: ['/var/cache/test/', '/var/cache/test1/']
+devices: ['10 - Test printer=lpr -Prprt10^OTH^P-DEC^^"QW"^^Test Printer^10']
