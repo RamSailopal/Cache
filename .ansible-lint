@@ -1,2 +1,0 @@
-skip_list:  # or 'skip_list' to silence them completely
-  - command-instead-of-module  # Had issue with mount of iso. Had to use command as module wouldn't work
